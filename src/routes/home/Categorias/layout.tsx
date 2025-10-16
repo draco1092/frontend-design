@@ -14,6 +14,7 @@ export const useServerTimeLoader = routeLoader$(() => {
 export default component$(() => {
   return (
     <>
+    <main class="pixel-font ">
       <Headers />
       <main class="relative">
         <img
@@ -24,10 +25,11 @@ export default component$(() => {
         
           <Slot />
 
-         
+    
       </main>
       
       <Footers />
+      </main>
     </>
   );
 });

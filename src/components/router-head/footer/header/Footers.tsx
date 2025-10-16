@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 
 export const Footers = component$(() => {
   return (
-    <footer class="flex-wrapflex absolute bottom-0 flex h-40 w-full flex-col flex-wrap items-center justify-center space-y-6 border-t-4 border-[#d4c0e4] bg-gradient-to-b from-[#230f34] to-[#050108] px-4 py-8 text-center text-gray-400">
+    <footer class="navbar flex-wrapflex flex h-40 w-full flex-col flex-wrap items-center justify-center space-y-6 border-t-4 border-[#5c486c] bg-gradient-to-b from-[#230f34] to-[#050108] px-4 py-8 text-center text-gray-400">
       <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
         Recursos
       </h2>
