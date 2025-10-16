@@ -1,20 +1,32 @@
-import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
-
+import { component$, Slot, useStyles$ } from "@builder.io/qwik";
+import { routeLoader$ } from "@builder.io/qwik-city";
+import { Headers } from "~/components/router-head/footer/header/Headers";
+import { Footers } from "~/components/router-head/footer/header/Footers";
+import {Carrusel} from "~/components/router-head/carrusel/carrusel";
+import { Mosaic } from "~/components/router-head/Menus/menu";
 
 
 export default component$(() => {
-  return (<>
-  
-  </>);
-});
+  return (
+    <>
+    <section>
+          <Carrusel/>
+          <Carrusel/>
+          <Carrusel/>
+        </section>
+          
 
-export const head: DocumentHead = {
-  title: "Welcome to Qwik",
-  meta: [
-    {
-      name: "description",
-      content: "Qwik site description",
-    },
-  ],
-};
+          <div class="absolute inset-0 bg-gradient-to-t from-[#230f34]/75 from-5% to-transparent" />
+
+      
+      <section class="relative min-h-screen bg-[url('/images/image(6).jpg')] bg-cover bg-fixed text-white">
+            <Mosaic/>
+            <Mosaic/>
+            <Mosaic/>
+            <Mosaic/>
+            <Mosaic/>        
+          
+        </section>
+    </>
+  );
+});

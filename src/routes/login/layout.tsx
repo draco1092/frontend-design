@@ -15,9 +15,7 @@ export default component$(() => {;
       </nav>
     </header>
      
-      <section id="arriba" class="relative bg-[url('/images/image.jpg')] bg-cover bg-fixed min-h-screen text-white">
-      <div class="absolute inset-0 bg-gradient-to-t from-[#230f34]/75 from-5% to-transparent"/>
-      </section>
+
     
 
     <section class="relative bg-[url('/images/image(2).jpg')] bg-cover bg-fixed min-h-screen text-white">
