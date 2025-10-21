@@ -9,9 +9,9 @@ export const useServerTimeLoader = routeLoader$(() => {
 
 export default component$(() => {;
   return (
-    <><main class='text-2xl font-bold text-black'>
+    <><main class='text-2xl font-bold text-white relative min-h-screen flex flex-col items-center justify-center overflow-hidden'>
           <img
-          src="/images/image(2).jpg"
+          src="/images/image(4).jpg"
           alt=""
           class="fixed inset-0 -z-10 h-full w-full object-cover object-center"
         />

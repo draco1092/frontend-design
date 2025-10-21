@@ -11,11 +11,6 @@ export default component$(() => {
   return (
     <>
         <main>
-          <img
-          src="/images/image(2).jpg"
-          alt=""
-          class="fixed inset-0 -z-10 h-full w-full object-cover object-center"
-        />
           <Slot />
         </main>
     </>

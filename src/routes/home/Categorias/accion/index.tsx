@@ -27,11 +27,14 @@ export default component$(() => {
         </section>
           
 
-          <div class="absolute inset-0 bg-gradient-to-t from-[#230f34]/75 from-5% to-transparent" />
-
-          <h1 class="text-6xl text-center">lista de juegos</h1>
+         
+       
+       
+          
+<h1 class="text-6xl text-center bg-amber-900">lista de juegos </h1>
       <section class="relative min-h-screen bg-[url('/images/image(6).jpg')] bg-cover bg-fixed text-white">
-
+     
+          
             <Mosaic/>
             <Mosaic/>
             <Mosaic/>
