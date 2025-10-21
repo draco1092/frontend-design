@@ -31,7 +31,7 @@ export default component$(() => {
        
        
           
-<h1 class="text-6xl text-center bg-amber-900">lista de juegos </h1>
+<h1 class="text-6xl text-center bg-[#110818]">lista de juegos </h1>
       <section class="relative min-h-screen bg-[url('/images/image(6).jpg')] bg-cover bg-fixed text-white">
      
           

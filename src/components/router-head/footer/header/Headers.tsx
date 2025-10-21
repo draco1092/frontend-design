@@ -5,8 +5,8 @@ export const Headers1 = component$(() => {
     <header>
       <nav class="border-b-3 border-[#230f34] bg-[#230f34]/25 shadow-md shadow-[#8f55c2]">
         <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
-          <a class="flex items-center">
-            <img src="images/logo.svg" class="mr-3 h-6 md:h-9" alt="Midnight-Logo" />
+          <a class="flex items-center relative w-[140px] h-[69px]">
+            <img src="\images\Logo.png" class="mr-3 h-6 md:h-9" alt="Midnight-Logo" />
           </a>
           <div class="flex items-center lg:order-2">
             <a href="/login/Sign-in/" class="mr-2 rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-gray-50 focus:ring-4 focus:ring-fuchsia-950 focus:outline-none lg:px-5 lg:py-2.5 dark:text-white dark:hover:bg-violet-950 dark:focus:ring-gray-800">Log in</a>
