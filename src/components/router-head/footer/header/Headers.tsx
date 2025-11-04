@@ -9,7 +9,7 @@ export const Headers1 = component$(() => {
             <img src="\images\Logo.png" class="mr-3 h-6 md:h-9" alt="Midnight-Logo" />
           </a>
           <div class="flex items-center lg:order-2">
-            <a href="/login/Sign-in/" class="mr-2 rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-gray-50 focus:ring-4 focus:ring-fuchsia-950 focus:outline-none lg:px-5 lg:py-2.5 dark:text-white dark:hover:bg-violet-950 dark:focus:ring-gray-800">Log in</a>
+            <a href="/User/sign-in" class="mr-2 rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-gray-50 focus:ring-4 focus:ring-fuchsia-950 focus:outline-none lg:px-5 lg:py-2.5 dark:text-white dark:hover:bg-violet-950 dark:focus:ring-gray-800">Log in</a>
            
           </div>
           <div class="hidden w-full items-center justify-between lg:order-1 lg:flex lg:w-auto" id="mobile-menu-2">
@@ -38,7 +38,7 @@ export const Headers2 = component$(() => {
             <img src="images/logo.svg" class="mr-3 h-6 md:h-9" alt="Midnight-Logo" />
           </a>
           <div class="flex items-center lg:order-2">
-            <a href="/login/Sign-in/" class="mr-2 rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-gray-50 focus:ring-4 focus:ring-fuchsia-950 focus:outline-none lg:px-5 lg:py-2.5 dark:text-white dark:hover:bg-violet-950 dark:focus:ring-gray-800">Log in</a>
+            <a href="/User/sign-in/" class="mr-2 rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-gray-50 focus:ring-4 focus:ring-fuchsia-950 focus:outline-none lg:px-5 lg:py-2.5 dark:text-white dark:hover:bg-violet-950 dark:focus:ring-gray-800">Log in</a>
            
           </div>
           <div class="hidden w-full items-center justify-between lg:order-1 lg:flex lg:w-auto" id="mobile-menu-2">
