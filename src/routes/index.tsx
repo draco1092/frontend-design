@@ -1,10 +1,8 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { routeLoader$ } from "@builder.io/qwik-city";
-import { Headers2 } from "~/components/router-head/footer/header/Headers";
+import { Headers1 } from "~/components/router-head/footer/header/Headers";
 import { Footers } from "~/components/router-head/footer/header/Footers";
-import { Carrusel } from "~/components/router-head/carrusel/carrusel";
-import { Mosaic } from "~/components/router-head/Menus/menu";
 
 
 
@@ -12,7 +10,7 @@ export default component$(() => {
   return (
     <>
 <main class=" text-fuchsia-200 pixel-font ">
-      <Headers2 />
+      <Headers1 />
       <main class="relative">
         <img
           src="/images/image.jpg"

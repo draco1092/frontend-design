@@ -1,7 +1,5 @@
 import { component$, $, useStyles$ } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
-import { Carrusel } from "~/components/router-head/carrusel/carrusel";
-import { Mosaic } from "~/components/router-head/Menus/menu";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { useLocation } from "@builder.io/qwik-city";
 

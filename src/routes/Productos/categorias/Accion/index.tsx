@@ -1,11 +1,8 @@
 import { component$, Slot, useStyles$ } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
-import {Carrusel} from "~/components/router-head/carrusel/carrusel";
-import { Mosaic } from "~/components/router-head/Menus/menu";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { useLocation } from '@builder.io/qwik-city';
-import {Headers2 } from "~/components/router-head/footer/header/Headers";
-
+import { Menu } from "../../../../components/router-head/Menu/menu";
 
 export default component$(() => {
   const loc = useLocation();
@@ -22,29 +19,14 @@ export default component$(() => {
     <br />
           <h1 class="text-6xl text-center "> juegos nuevos</h1>
           <br />
-          <Carrusel/>
-          
-          <h1 class="text-6xl text-center "> juegos destacados</h1>
           <br />
-          <Carrusel/>
           <br />
         </section>
-          
+        
 
-         
-       
-       
-          
 <h1 class="text-6xl text-center bg-[#110818]">lista de juegos </h1>
-      <section class="relative min-h-screen bg-[url('/images/image(6).jpg')] bg-cover bg-fixed text-white">
-     
-          
-            <Mosaic/>
-            <Mosaic/>
-            <Mosaic/>
-            <Mosaic/>
-            <Mosaic/>        
-          
+      <section class="relative min-h-screen bg-[url('/images/image(6).jpg')] bg-cover bg-fixed text-white grid place-items-center px-4 py-16 sm:px-6 lg:px-8">
+     <Menu />
         </section>
         </main>
     </>
