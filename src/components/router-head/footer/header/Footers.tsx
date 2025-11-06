@@ -2,12 +2,12 @@ import { component$ } from "@builder.io/qwik";
 
 export const Footers = component$(() => {
   return (
-    <footer class="border-t-4 rounded-t border-[#5c486c] bg-gradient-to-b from-[#230f34] to-[#050108] px-4 py-8 text-center text-gray-400">
+    <footer class=" border-t-4 rounded-t border-[#5c486c] bg-gradient-to-b from-[#230f34] to-[#050108] px-4 py-8 text-center text-gray-400">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
-        
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Proyecto Disño Web
+
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Proyecto Diseño Web
                   </span>
 
           </div>

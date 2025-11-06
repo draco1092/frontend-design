@@ -9,7 +9,7 @@ export const Headers1 = component$(() => {
         <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-4">
           <a class="flex items-center h-10">
             <img
-              src="/images/Logo.svg"
+              src="/images/M-Logo.svg"
               class="h-8 w-auto"
               alt="Midnight Logo"
               loading="lazy"
@@ -17,12 +17,35 @@ export const Headers1 = component$(() => {
           </a>
 
           <div class="flex items-center lg:order-2">
-            <a
-              href="/User/sign-in/"
-              class="mr-2 rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-gray-50 focus:ring-4 focus:ring-fuchsia-950 focus:outline-none lg:px-5 lg:py-2.5 dark:text-white dark:hover:bg-violet-950 dark:focus:ring-gray-800"
-            >
-              Log in
-            </a>
+             <div class="relative inline-block text-left">
+                <input
+                  type="checkbox"
+                  id="dropdown-toggle"
+                  class="peer hidden"
+                />
+
+                <label
+                  htmlFor="dropdown-toggle"
+                  class="block text-2xl h-fit px-6 rounded border-b border-dotted border-purple-900 hover:bg-purple-950/20 hover:text-indigo-500"
+                >
+                  Usuario
+                </label>
+
+                <div class="pointer-events-none absolute right-0 z-10 mt-2 w-40 origin-top-right scale-95 rounded bg-indigo-950 text-white opacity-0 shadow-lg outline-1 -outline-offset-1 outline-purple-900/60 transition-discrete duration-200 ease-out peer-checked:pointer-events-auto peer-checked:translate-y-0 peer-checked:scale-100 peer-checked:opacity-100">
+                  <a
+                    href="/User/sign-in/"
+                    class="block px-4 py-2 hover:bg-indigo-900"
+                  >
+                    Iniciar Sesion
+                  </a>
+                  <a
+                    href="/User/Sign-up/"
+                    class="block px-4 py-2 hover:bg-indigo-900"
+                  >
+                    Registrarse
+                  </a>
+                </div>
+              </div>
 
             <button
               type="button"
@@ -38,58 +61,52 @@ export const Headers1 = component$(() => {
           </div>
 
           <div
-            class="hidden w-full items-center justify-between lg:order-1 lg:flex lg:w-auto"
+            class="hidden w-full space-x-4 items-center justify-between lg:order-1 lg:flex lg:w-auto"
             id="mobile-menu-2"
           >
-            <ul class="mt-4 flex flex-col font-medium lg:mt-0 lg:flex-row lg:space-x-8">
-              <li>
+                <a
+                  href="/"
+                  class="block px-3 h-8 rounded border-b border-dotted border-purple-900 hover:bg-purple-950/20 hover:text-indigo-500"
+                >
+                  Info Principal
+                </a>
+                <a
+                  href="/Productos/categorias/Principal"
+                  class="block px-3 h-8 rounded border-b border-dotted border-purple-900 hover:bg-purple-950/20 hover:text-indigo-500"
+                >
+                  Pagina Principal
+                </a>
+                <a
+                  href="/Productos/categorias/Noticias"
+                  class="block px-3 h-8 rounded border-b border-dotted border-purple-900 hover:bg-purple-950/20 hover:text-indigo-500"
+                >
+                  Noticias
+                </a>
+            </div>
+        </div>
+
+        <div class={open.value ? "block lg:hidden px-4 pb-4" : "hidden lg:hidden px-4 pb-4"}>
+          <ul class="space-y-2">
+            <li>
+<a
+                  href="/"
+                  class="block h-8 rounded border-b border-dotted border-purple-900 hover:bg-purple-950/20 hover:text-indigo-500"
+                >
+                  Info Principal
+                </a>
                 <a
                   href="/"
                   class="block h-8 rounded border-b border-dotted border-purple-900 hover:bg-purple-950/20 hover:text-indigo-500"
                 >
                   Pagina Principal
                 </a>
-              </li>
-              <div class="relative inline-block text-left">
-                <input
-                  type="checkbox"
-                  id="dropdown-toggle"
-                  class="peer hidden"
-                />
-
-                <label
-                  htmlFor="dropdown-toggle"
+                <a
+                  href="/"
                   class="block h-8 rounded border-b border-dotted border-purple-900 hover:bg-purple-950/20 hover:text-indigo-500"
                 >
-                  categorias
-                </label>
-
-                <div class="pointer-events-none absolute right-0 z-10 mt-2 w-40 origin-top-right scale-95 rounded bg-indigo-950 text-white opacity-0 shadow-lg outline-1 -outline-offset-1 outline-purple-900/60 transition-discrete duration-200 ease-out peer-checked:pointer-events-auto peer-checked:translate-y-0 peer-checked:scale-100 peer-checked:opacity-100">
-                  <a
-                    href="/Productos/categorias/Accion/"
-                    class="block px-4 py-2 hover:bg-indigo-900"
-                  >
-                    Accion
-                  </a>
-                </div>
-              </div>
-            </ul>
-          </div>
-        </div>
-
-        <div class={open.value ? "block lg:hidden px-4 pb-4" : "hidden lg:hidden px-4 pb-4"}>
-          <ul class="space-y-2">
-            <li>
-              <a href="/" class="block h-8 rounded border-b border-dotted border-purple-900 px-2 py-2 hover:bg-purple-950/20">Pagina Principal</a>
-            </li>
-            <li>
-              <details class="bg-transparent">
-                <summary class="cursor-pointer h-8 rounded border-b border-dotted border-purple-900 px-2 py-2 hover:bg-purple-950/20">categorias</summary>
-                <div class="mt-2 pl-3">
-                  <a href="/Productos/categorias/Accion/" class="block px-4 py-2 hover:bg-indigo-900">Accion</a>
-                </div>
-              </details>
-            </li>
+                  Noticias
+                </a>            
+                </li>
           </ul>
         </div>
       </nav>
