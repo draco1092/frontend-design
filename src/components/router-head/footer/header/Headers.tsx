@@ -1,6 +1,6 @@
 import { component$, useSignal } from "@builder.io/qwik";
 
-export const Headers1 = component$(() => {
+export const Headers1 = component$(() => {// en este no ahi mensaje cuando conectes la base de datos, me avisas y yo lo termino despues del usuario
   const open = useSignal(false);
 
   return (
