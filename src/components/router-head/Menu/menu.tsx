@@ -23,6 +23,27 @@ export const Menu = component$(() => {
       precio: 300,
       imagen: "/images/Raccontest.jpeg",
       categoria: "rol"
+    },
+    {
+      id: 4,
+      nombre: "Producto 4",
+      precio: 400,
+      imagen: "/images/Raccontest.jpeg",
+      categoria: "deportes"
+    },
+    {
+      id: 5,
+      nombre: "Producto 5",
+      precio: 500,
+      imagen: "/images/Raccontest.jpeg",
+      categoria: "estrategia"
+    },
+    {
+      id: 6,
+      nombre: "Producto 6",
+      precio: 600,
+      imagen: "/images/Raccontest.jpeg",
+      categoria: "simulacion"
     }
   ];
   return (

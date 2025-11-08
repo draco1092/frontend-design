@@ -4,15 +4,14 @@ export const Carusel = component$(() => {
   // Lista de imágenes
   const images = [
     //// estas imagenes so de ejemplo si es posible cambialas por las imagenes de los juegos, y has que cambien en base al juego
-    "/images/Raccontest.jpeg",
-    "/images/Raccontest.jpeg",
-    "/images/Raccontest.jpeg",
-    "/images/Raccontest.jpeg",
-    "/images/Raccontest.jpeg",
+    "/images/Raccontest.jpeg","/images/Raccontest.jpeg","/videos/m2-res_496p.mp4"
+
   ];
 
   // índice de la imagen actual
   const current = useSignal(0);
+
+  const isVideo = (src: string) => /\.(mp4|webm|ogg)$/i.test(src) || src.startsWith("/videos/");
 
   // Funciones para navegar (deben ser QRLs para usarse en onClick$)
   const next = $(() => (current.value = (current.value + 1) % images.length));
@@ -24,11 +23,20 @@ export const Carusel = component$(() => {
     <div class="flex flex-col items-center gap-6">
       {/* Imagen principal */}
       <div class="relative h-64 w-full max-w-4xl overflow-hidden rounded-lg md:h-96">
-        <img
-          src={images[current.value]}
-          alt={`Imagen ${current.value + 1}`}
-          class="h-full w-full object-cover transition-all duration-700"
-        />
+        {isVideo(images[current.value]) ? (
+          <video
+            src={images[current.value]}
+            class="h-full w-full object-cover transition-all duration-700"
+            controls
+            playsInline
+          />
+        ) : (
+          <img
+            src={images[current.value]}
+            alt={`Imagen ${current.value + 1}`}
+            class="h-full w-full object-cover transition-all duration-700"
+          />
+        )}
 
         {/* Controles */}
         <button
@@ -96,11 +104,21 @@ export const Carusel = component$(() => {
                 : "border-transparent hover:border-indigo-300",
             ]}
           >
-            <img
-              src={img}
-              alt={`Miniatura ${i + 1}`}
-              class="h-24 w-full object-cover opacity-80 hover:opacity-100"
-            />
+            {isVideo(img) ? (
+              <video
+                src={img}
+                class="h-24 w-full object-cover opacity-80 hover:opacity-100"
+                muted
+                playsInline
+                preload="metadata"
+              />
+            ) : (
+              <img
+                src={img}
+                alt={`Miniatura ${i + 1}`}
+                class="h-24 w-full object-cover opacity-80 hover:opacity-100"
+              />
+            )}
           </button>
         ))}
       </div>

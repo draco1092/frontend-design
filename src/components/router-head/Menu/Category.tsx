@@ -3,7 +3,7 @@ import { component$ } from "@builder.io/qwik";
 export const Category = component$(() => { 
   //este es un ejemplo sin base de datos, conecta esta parte a la base de datos para que traiga las categorias reales.
   const categorias = [
-            'accion', 'aventura', 'rol', 'deportes',]
+            'accion', 'aventura', 'rol', 'deportes', 'estrategia', 'simulacion']
             //
   return (
     <section class="bg-gray-50 py-8 antialiased md:py-16 dark:bg-gray-900/10">
