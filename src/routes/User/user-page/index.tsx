@@ -38,8 +38,8 @@ export default component$(() => {
       <div class="grid grid-cols-2 gap-2 rounded-lg border border-[#582a5e] bg-[#171122] p-3 shadow-lg">
         <button
           class="bg-[#0e141b] border border-[#582a5e] rounded-md p-2 text-sm text-white font-semibold text-center hover:bg-[#2b1b38] transition"
-        >
-          Biblioteca
+        ><a href="/User/Biblioteca">
+          Biblioteca</a>
         </button>
         <button
           class="bg-[#0e141b] border border-[#582a5e] rounded-md p-2 text-sm text-white font-semibold text-center hover:bg-[#251b38] transition"
@@ -58,12 +58,6 @@ export default component$(() => {
         <div class="bg-[#0e141b] border border-[#582a5e] rounded-md p-2 text-center hover:bg-[#251b38] transition">
           <p class="text-lg font-bold text-white">124</p>
           <p class="text-xs text-gray-400">Juegos</p>
-        </div>
-
-
-        <div class="bg-[#0e141b] border border-[#582a5e] rounded-md p-2 text-center hover:bg-[#251b38] transition">
-          <p class="text-lg font-bold text-white">32h</p>
-          <p class="text-xs text-gray-400">Última semana</p>
         </div>
 
         <div class="bg-[#0e141b] border border-[#582a5e] rounded-md p-2 text-center hover:bg-[#251b38] transition">
