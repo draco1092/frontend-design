@@ -82,6 +82,12 @@ export const Headers1 = component$(() => {// en este no ahi mensaje cuando conec
                 >
                   Noticias
                 </a>
+                <a
+                  href="/Productos/categorias/Carrito"
+                  class="block px-3 h-8 rounded border-b border-dotted border-purple-900 hover:bg-purple-950/20 hover:text-indigo-500"
+                >
+                  Carrito
+                </a>
             </div>
         </div>
 
@@ -95,17 +101,23 @@ export const Headers1 = component$(() => {// en este no ahi mensaje cuando conec
                   Info Principal
                 </a>
                 <a
-                  href="/"
+                  href="/Productos/categorias/Principal"
                   class="block h-8 rounded border-b border-dotted border-purple-900 hover:bg-purple-950/20 hover:text-indigo-500"
                 >
                   Pagina Principal
                 </a>
                 <a
-                  href="/"
+                  href="/Productos/categorias/Noticias"
                   class="block h-8 rounded border-b border-dotted border-purple-900 hover:bg-purple-950/20 hover:text-indigo-500"
                 >
                   Noticias
                 </a>            
+                <a
+                  href="/Productos/categorias/Carrito"
+                  class="block h-8 rounded border-b border-dotted border-purple-900 hover:bg-purple-950/20 hover:text-indigo-500"
+                >
+                  Carrito
+                </a>  
                 </li>
           </ul>
         </div>
