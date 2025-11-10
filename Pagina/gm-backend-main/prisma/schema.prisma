@@ -1,0 +1,79 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  // Datos
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  bio      String @default("Sin biografia")
+  email    String @unique
+  permiso  Int    @default(1)
+  password String
+
+  // Custom basica
+  icon   String @default("https://i.pinimg.com/736x/4b/00/8b/4b008be686dbfdfb046785b9aac318c5.jpg")
+  banner String @default("https://i.pinimg.com/736x/ac/e4/8c/ace48c5d4cbc8c5e5e52955b46db0ed2.jpg")
+
+  categorias Categoria[]
+  juegos     Juego[]
+  biblioteca Biblioteca[] // relacion con biblioteca
+}
+
+model Categoria {
+  id        Int    @id @default(autoincrement())
+  nombre    String @unique
+  usuarioId Int
+
+  // Relacion usuario
+  usuario User @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+
+  // Relacion juegos
+  juegos Juego[] @relation("CategoriasJuego")
+}
+
+model Imagen {
+  id   Int    @id @default(autoincrement())
+  href String
+
+  // Relacion juegos
+  juegoId Int
+  juego   Juego @relation(fields: [juegoId], references: [id], onDelete: Cascade)
+}
+
+model Juego {
+  id          Int      @id @default(autoincrement())
+  titulo      String   @unique
+  descripcion String   @default("Sin descripcion")
+  link        String
+  precio      Int      @default(0)
+  publicado   DateTime @default(now())
+
+  // Relacion usuario
+  usuarioId Int
+  usuario   User @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+
+  // Relacion categorias
+  categorias Categoria[] @relation("CategoriasJuego")
+
+  // Relacion imagenes
+  imagenes Imagen[]
+
+  // Relacion con biblioteca
+  biblioteca Biblioteca[]
+}
+
+model Biblioteca {
+  id        Int @id @default(autoincrement())
+  usuarioId Int
+  juegoId   Int
+
+  usuario User  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  juego   Juego @relation(fields: [juegoId], references: [id], onDelete: Cascade)
+}

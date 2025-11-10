@@ -2,6 +2,11 @@ import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
+  const email = useSignal("");
+  const password = useSignal("");
+  const errorMessage = useSignal("");
+  const isLoading = useSignal(false);
+
   useVisibleTask$(() => {
     history.pushState(null, "", window.location.href);
     window.onpopstate = function () {
@@ -34,6 +39,8 @@ export default component$(() => {
                     type="text"
                     class="w-80 rounded-md border border-gray-300 bg-white px-4 py-3 text-sm text-purple-400"
                     placeholder="abc@ejemplo.com"
+                    value={email.value}
+                    onInput$={(ev) => email.value = (ev.target as HTMLInputElement).value}
                   />
                 </div>
                 <div>
@@ -45,15 +52,58 @@ export default component$(() => {
                     name="password"
                     type="password"
                     class="w-80 rounded-md border border-gray-300 bg-white px-4 py-3 text-sm text-purple-400"
+                    value={password.value}
+                    onInput$={(ev) => password.value = (ev.target as HTMLInputElement).value}
                   />
                 </div>
+                {errorMessage.value && (
+                  <div class="text-red-400 text-sm text-center">
+                    {errorMessage.value}
+                  </div>
+                )}
                 <div>
                   <div class="mt-12">
                     <button
                       type="button"
-                      class="w-80 cursor-pointer rounded-md bg-purple-700 px-4 py-3 text-sm font-medium tracking-wider text-white hover:bg-purple-800 focus:outline-none"
+                      class="w-80 cursor-pointer rounded-md bg-purple-700 px-4 py-3 text-sm font-medium tracking-wider text-white hover:bg-purple-800 focus:outline-none disabled:bg-purple-500 disabled:cursor-not-allowed"
+                      onClick$={async () => {
+                        try {
+                          isLoading.value = true;
+                          errorMessage.value = "";
+                          
+                          if (!email.value || !password.value) {
+                            errorMessage.value = "Por favor completa todos los campos";
+                            return;
+                          }
+
+                          const response = await fetch('YOUR_BACKEND_URL/api/login', {
+                            method: 'POST',
+                            headers: {
+                              'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                              email: email.value,
+                              password: password.value,
+                            }),
+                          });
+
+                          if (!response.ok) {
+                            const data = await response.json();
+                            errorMessage.value = data.message || "Usuario o contraseña incorrectos";
+                            return;
+                          }
+
+                          // Si todo está bien, redirigir al usuario
+                          window.location.href = "/User/user-page";
+                        } catch (error) {
+                          errorMessage.value = "Error al conectar con el servidor";
+                        } finally {
+                          isLoading.value = false;
+                        }
+                      }}
+                      disabled={isLoading.value}
                     >
-                      iniciar Sesion
+                      {isLoading.value ? "Cargando..." : "Iniciar Sesión"}
                     </button>
                   </div>
                   <p class="mt-6 text-center text-sm text-purple-300">
@@ -77,7 +127,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "Iniciar sesión",
   meta: [
     {
       name: "description",
