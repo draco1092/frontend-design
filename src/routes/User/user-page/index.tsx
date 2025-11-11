@@ -15,7 +15,7 @@ export default component$(() => {
       alt="Banner"
       class="h-56 w-full object-cover opacity-90"
     />
-    <div class="absolute right-0 bottom-0 left-0 h-24 bg-gradient-to-t from-[#1e1721] to-transparent"></div>
+    <div class="absolute right-0 bottom-0 left-0 h-24 bg-linear-to-t from-[#1e1721] to-transparent"></div>
 
     <div class="absolute bottom-4 left-6 flex items-end gap-4">
       <img
